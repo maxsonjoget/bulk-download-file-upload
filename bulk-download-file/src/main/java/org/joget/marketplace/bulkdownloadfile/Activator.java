@@ -1,4 +1,4 @@
-package org.joget.marketplace.bulk-download-file;
+package org.joget.marketplace.bulkdownloadfile;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -14,7 +14,7 @@ public class Activator implements BundleActivator {
         registrationList = new ArrayList<ServiceRegistration>();
 
         //Register plugin here
-        //registrationList.add(context.registerService(MyPlugin.class.getName(), new MyPlugin(), null));
+        registrationList.add(context.registerService(BulkDownloadFile.class.getName(), new BulkDownloadFile(), null));
     }
 
     public void stop(BundleContext context) {
